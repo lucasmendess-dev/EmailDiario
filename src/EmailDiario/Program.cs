@@ -1,5 +1,7 @@
 using EmailDiario.Data;
 using Microsoft.EntityFrameworkCore;
+using EmailDiario.DAO;
+using EmailDiario.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ var connectionString =
 
 builder.Services.AddDbContext<EmailDiarioDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<DestinatarioDAO>();
+builder.Services.AddScoped<DestinatarioService>();
 
 var app = builder.Build();
 
