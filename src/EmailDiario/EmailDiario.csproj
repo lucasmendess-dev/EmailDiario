@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="Jobs\" />
     <Folder Include="Services\" />
   </ItemGroup>
